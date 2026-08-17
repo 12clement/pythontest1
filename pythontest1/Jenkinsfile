@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Check Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
+
+        stage('Run dupletter') {
+            steps {
+                bat 'python dupletter.py'
+            }
+        }
+
+        stage('Run fibo') {
+            steps {
+                bat 'python fibo.py'
+            }
+        }
+
+        stage('Run OOP concepts') {
+            steps {
+                bat 'python oop_concepts.py'
+            }
+        }
+
+        stage('Run pallidrome') {
+            steps {
+                bat 'python pallidrome.py'
+            }
+        }
+
+        stage('Run print duplicates') {
+            steps {
+                bat 'python printdupsletters.py'
+            }
+        }
+
+        stage('Run reverse') {
+            steps {
+                bat 'python reverse1.py'
+            }
+        }
+    }
+}
