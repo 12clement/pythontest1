@@ -5,10 +5,27 @@ def fibo(n):
         return [0]
     elif n == 2:
         return [0, 1]
-    
+
     fib_sequence = [0, 1]
     for i in range(2, n):
         next_fib = fib_sequence[i - 1] + fib_sequence[i - 2]
         fib_sequence.append(next_fib)
-    
+
     return fib_sequence
+
+
+# method 2
+
+"""
+# Number of terms
+n = 10
+
+a, b = 0, 1
+
+print("Fibonacci Series:")
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+
+
+"""
