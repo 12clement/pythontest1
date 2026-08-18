@@ -14,7 +14,7 @@ def fibo(n):
     return fib_sequence
 
 
-# method 2
+# method 2 very important!
 
 """
 # Number of terms
