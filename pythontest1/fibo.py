@@ -18,7 +18,7 @@ def fibo(n):
 
 """
 # Number of terms
-n = 10
+n = 9
 
 a, b = 0, 1
 
