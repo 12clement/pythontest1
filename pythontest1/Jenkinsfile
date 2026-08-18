@@ -11,43 +11,57 @@ pipeline {
 
         stage('Check Python') {
             steps {
-                bat 'python --version'
+                dir('pythontest1') {
+                    bat 'python --version'
+                }
             }
         }
 
         stage('Run dupletter') {
             steps {
-                bat 'python dupletter.py'
+                dir('pythontest1') {
+                    bat 'python dupletter.py'
+                }
             }
         }
 
         stage('Run fibo') {
             steps {
-                bat 'python fibo.py'
+                dir('pythontest1') {
+                    bat 'python fibo.py'
+                }
             }
         }
 
         stage('Run OOP concepts') {
             steps {
-                bat 'python oop_concepts.py'
+                dir('pythontest1') {
+                    bat 'python oop_concepts.py'
+                }
             }
         }
 
         stage('Run pallidrome') {
             steps {
-                bat 'python pallidrome.py'
+                dir('pythontest1') {
+                    bat 'python pallidrome.py'
+                }
             }
         }
 
         stage('Run print duplicates') {
             steps {
-                bat 'python printdupsletters.py'
+                dir('pythontest1') {
+                    bat 'python printdupsletters.py'
+                }
             }
         }
 
         stage('Run reverse') {
             steps {
-                bat 'python reverse1.py'
+                dir('pythontest1') {
+                    bat 'python reverse1.py'
+                }
             }
         }
     }
